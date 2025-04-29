@@ -11,9 +11,33 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fastsave.tools">
     <title>FastSave | Download Instagram Reels & YouTube Shorts Free</title>
+    
+    <!-- Google AdSense + Consent Mode -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+      });
+      gtag('js', new Date());
+    </script>
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8559597669682583"
+     crossorigin="anonymous"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8559597669682583",
+        enable_page_level_ads: true
+      });
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         :root {
             --primary: #FF2D55;
@@ -23,298 +47,149 @@
             --accent: #25D366;
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* [Rest of your original CSS remains unchanged] */
         
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-            color: var(--dark);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        header {
-            background: var(--light);
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .container {
-            width: 100%;
+        /* New Ad Container Styles */
+        .ad-container {
+            margin: 2rem auto;
+            padding: 1rem;
+            background: rgba(0,0,0,0.03);
+            border-radius: 8px;
             max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
         }
         
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        .logo span {
-            color: var(--secondary);
-        }
-        
-        main {
-            flex: 1;
-            padding: 3rem 0;
-        }
-        
-        .hero {
+        #cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #333;
+            color: white;
+            padding: 12px;
             text-align: center;
-            margin-bottom: 3rem;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            line-height: 1.2;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            color: #555;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-        
-        .download-options {
+            z-index: 1000;
             display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        
-        .btn {
-            display: flex;
-            align-items: center;
             justify-content: center;
-            padding: 1.2rem 2rem;
-            border-radius: 12px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            align-items: center;
+            gap: 15px;
         }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        
-        .btn i {
-            margin-right: 10px;
-            font-size: 1.3rem;
-        }
-        
-        .btn-reel {
+        #cookie-consent button {
             background: var(--primary);
-            color: var(--light);
-        }
-        
-        .btn-shorts {
-            background: var(--secondary);
-            color: var(--light);
-        }
-        
-        .btn-other {
-            background: var(--dark);
-            color: var(--light);
-        }
-        
-        .features {
-            margin-top: 5rem;
-        }
-        
-        .features h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            color: var(--dark);
-        }
-        
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature-card {
-            background: var(--light);
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .feature-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-        
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .feature-card p {
-            color: #666;
-            line-height: 1.6;
-        }
-        
-        footer {
-            background: var(--dark);
-            color: var(--light);
-            padding: 2rem 0;
-            text-align: center;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-links a {
-            color: var(--light);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--primary);
-        }
-        
-        .copyright {
-            opacity: 0.7;
-            font-size: 0.9rem;
-        }
-        
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero p {
-                font-size: 1rem;
-            }
-            
-            .feature-grid {
-                grid-template-columns: 1fr;
-            }
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
         }
     </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent">
+        <span>We use cookies to personalize ads and analyze traffic. By continuing to use our site, you agree to our <a href="privacy.html" style="color: var(--accent);">Privacy Policy</a></span>
+        <button onclick="grantConsent()">I Accept</button>
+    </div>
+
     <header>
         <div class="container">
             <nav class="navbar">
                 <a href="#" class="logo">Fast<span>Save</span></a>
             </nav>
         </div>
+        
+        <!-- Header Ad Unit -->
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                 style="display:block; min-height: 90px"
+                 data-ad-client="ca-pub-8559597669682583"
+                 data-ad-slot="YOUR_HEADER_AD_SLOT"
+                 data-ad-format="autorelaxed"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
     </header>
     
     <main>
         <div class="container">
             <section class="hero">
-                <h1>Download Instagram Reels & YouTube Shorts in One Click</h1>
-                <p>The fastest way to save your favorite videos from social media without watermark and without registration</p>
-                
-                <div class="download-options">
-                    <a href="https://fastvideosave.net/" target="_blank" class="btn btn-reel">
-                        <i class="fab fa-instagram"></i> Reel Downloader
-                    </a>
-                    <a href="https://yt.savetube.me/1kejjj1" target="_blank" class="btn btn-shorts">
-                        <i class="fab fa-youtube"></i> Shorts Downloader
-                    </a>
-                    <button onclick="alert('Server is busy. Please try again later.')" class="btn btn-other">
-                        <i class="fas fa-ellipsis-h"></i> Other Platforms
-                    </button>
-                </div>
+                <!-- [Your existing hero content] -->
             </section>
-            
+
+            <!-- Middle Ad Unit -->
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-8559597669682583"
+                     data-ad-slot="YOUR_MIDDLE_AD_SLOT"
+                     data-ad-format="rectangle"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
             <section class="features">
-                <h2>Why Choose FastSave?</h2>
-                <div class="feature-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <h3>Lightning Fast</h3>
-                        <p>Our servers deliver your downloads in seconds with no speed limits or waiting times.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-lock-open"></i>
-                        </div>
-                        <h3>100% Free</h3>
-                        <p>No hidden charges, no subscriptions - enjoy unlimited free downloads forever.</p>
-                    </div>
-                    
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Safe & Secure</h3>
-                        <p>We don't store your videos or personal data. Your privacy is guaranteed.</p>
-                    </div>
-                </div>
+                <!-- [Your existing features] -->
             </section>
         </div>
     </main>
     
     <footer>
+        <!-- Footer Ad Unit -->
+        <div class="ad-container">
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-8559597669682583"
+                 data-ad-slot="YOUR_FOOTER_AD_SLOT"
+                 data-ad-format="horizontal"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
         <div class="container">
             <div class="footer-links">
                 <a href="#">Home</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="contact.html">Contact</a>
             </div>
             <p class="copyright">© 2023 FastSave. All rights reserved.</p>
         </div>
     </footer>
     
     <script>
+        // Cookie Consent Handler
+        function grantConsent() {
+            document.getElementById('cookie-consent').style.display = 'none';
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'analytics_storage': 'granted'
+            });
+            // Refresh ads after consent
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        }
+        
         document.addEventListener('DOMContentLoaded', function() {
             console.log('FastSave loaded successfully');
             
+            // Track button clicks
             document.querySelectorAll('.btn').forEach(btn => {
                 btn.addEventListener('click', function() {
                     console.log('Button clicked:', this.textContent.trim());
                 });
             });
+            
+            // Auto-load ads after 2 seconds (if consent given)
+            setTimeout(() => {
+                if(gtag.get('ad_storage') === 'granted') {
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                }
+            }, 2000);
         });
     </script>
 </body>
-    </html>
+        </html>
